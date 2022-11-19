@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/services.dart';
 
+import 'PageManager.dart';
+
 //import 'PageManager.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -125,7 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              //Navigator.pushNamed(context, PageManager.routName);
+                              Navigator.pushNamed(context, PageManager.routName);
 
                               if (_formKey.currentState!.validate()) {
                                 var userSignin = {
@@ -162,11 +164,11 @@ class _LoginScreenState extends State<LoginScreen> {
                                         duration: new Duration(seconds: 5),
                                       );
                                     } else {
-                                      // Navigator.pushNamed(
-                                      //   context,
-                                      //   PageManager.routName,
-                                      //   arguments: keyUser,
-                                      // );
+                                      Navigator.pushNamed(
+                                        context,
+                                        PageManager.routName,
+                                        arguments: keyUser,
+                                      );
                                     }
                                   }
                                 });

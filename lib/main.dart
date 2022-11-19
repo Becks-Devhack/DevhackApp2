@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 // import 'HomeScreen.dart';
 import 'LoginScreen.dart';
 // import 'PageManager.dart';
+import 'PageManager.dart';
 import 'SplashScreen.dart';
 //import 'StartScreen.dart';
 import 'firebase_options.dart';
@@ -36,9 +37,9 @@ class MyApp extends StatelessWidget{
         LoginScreen.routName: (ctx) => LoginScreen(),
         // ReportScreen.routName: (ctx) => ReportScreen(),
         // MapScreen.routName: (ctx) => MapScreen(),
-        //PageManager.routName: (ctx) => PageManager(),
+        PageManager.routName: (ctx) => PageManager(),
         // Random.routName: (ctx) => Random(),
-        // LoginPage.routName: (ctx) => LoginPage(title: 'Login UI'),
+         //LoginPage.routName: (ctx) => LoginPage(title: 'Login UI'),
       },
       home: SplashScreen(),
     );
