@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'main.dart';
+
 class DevicePage extends StatefulWidget {
   @override
   State<DevicePage> createState() => _DevicePageState();
@@ -27,7 +29,7 @@ class _DevicePageState extends State<DevicePage> {
                   ),
                   Container(
                     height: height * 0.15,
-                    padding: EdgeInsets.only(left: 60),
+                    padding: EdgeInsets.only(left: 45),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
@@ -45,7 +47,7 @@ class _DevicePageState extends State<DevicePage> {
               ],
             ),
             SizedBox(height: 0.1 * height),
-            added
+            eu
                 ? Container(
                     height: 0.41 * height,
                     child: Column(
@@ -73,8 +75,8 @@ class _DevicePageState extends State<DevicePage> {
                 : GestureDetector(
                     onTap: () {
                       setState(() {
-                        added = true;
-                        print(added);
+                        eu = true;
+                        print(eu);
                       });
                     },
                     child: Container(

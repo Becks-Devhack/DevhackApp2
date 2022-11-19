@@ -9,6 +9,8 @@ import 'SplashScreen.dart';
 //import 'StartScreen.dart';
 import 'firebase_options.dart';
 
+bool eu = false;
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
