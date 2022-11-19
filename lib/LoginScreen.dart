@@ -89,7 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     hintText: 'Email',
                                     prefixIcon: const Icon(Icons.email),
                                     filled: true,
-                                    fillColor: Color(0xFF3F826D).withOpacity(0.2),
+                                    fillColor: Color(0xFF758ECD).withOpacity(0.2),
                                     border: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(10),
                                     ),
@@ -110,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   obscureText: true,
                                   decoration: InputDecoration(
                                     filled: true,
-                                    fillColor: Color(0xFF3F826D).withOpacity(0.2),
+                                    fillColor: Color(0xFF758ECD).withOpacity(0.2),
                                     prefixIcon: const Icon(Icons.lock),
                                     hintText: 'Password',
                                     border: OutlineInputBorder(
@@ -175,12 +175,12 @@ class _LoginScreenState extends State<LoginScreen> {
                               }
                             },
                             style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all<Color>(Color(0xFFB23A48)),
+                                backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF758ECD)),
                                 shape:
                                 MaterialStateProperty.all<RoundedRectangleBorder>(
                                     RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(18.0),
-                                        side: BorderSide(color: Color(0xFFB23A48))))),
+                                        side: BorderSide(color: Color(0xFF758ECD))))),
                             child: const Text(
                               'Sign in',
                               style: TextStyle(

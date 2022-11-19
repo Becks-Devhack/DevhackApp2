@@ -28,9 +28,9 @@ class _SplashScreenState extends State<SplashScreen> {
                 height: 0.8 * height,
                 decoration: BoxDecoration(
                     border: Border.all(
-                      color: Colors.black,
+                      color: Color(0xFF0F1020),
                     ),
-                    color: Colors.black,
+                    color: Color(0xFF0F1020),
                     borderRadius: BorderRadius.only(
                         bottomRight: Radius.circular(60),
                         bottomLeft: Radius.circular(60))),

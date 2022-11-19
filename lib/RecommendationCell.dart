@@ -18,7 +18,7 @@ class PatientCell extends StatelessWidget {
           height: 0.2 * height,
           width: width * 0.8,
           decoration: BoxDecoration(
-              color: Color(0xFF3F826D).withOpacity(0.3),
+              color: Color(0xFF758ECD).withOpacity(0.3),
               borderRadius: BorderRadius.all(Radius.circular(30))
           ),
           child: Row(
@@ -46,7 +46,7 @@ class PatientCell extends StatelessWidget {
                     Text("Discount: ${patient.discount}%", style: TextStyle(
                         fontSize: 10,
                         color: Colors.black,
-                        fontWeight: FontWeight.w400)),
+                        fontWeight: FontWeight.bold)),
                   ],
                 ),
               ),

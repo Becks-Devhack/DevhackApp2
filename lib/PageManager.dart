@@ -1,4 +1,5 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
+import 'package:dev_hack/DevicePage.dart';
 import 'package:flutter/material.dart';
 import 'HomeScreen.dart';
 
@@ -19,7 +20,7 @@ class _PageManagerState extends State<PageManager> {
   final List<Widget> bottomBarPages = [
     //AppointmentsPage(),
     HomeScreen(),
-    //HistoryPage(),
+    DevicePage(),
   ];
 
   @override
@@ -46,9 +47,9 @@ class _PageManagerState extends State<PageManager> {
       bottomNavigationBar: (bottomBarPages.length <= maxCount)
           ? AnimatedNotchBottomBar(
         pageController: _pageController,
-        color: Color(0xFFB23A48),
+        color: Color(0xFF758ECD),
         showLabel: false,
-        notchColor: Color(0xFFB23A48),
+        notchColor: Color(0xFF758ECD),
         bottomBarItems: [
           const BottomBarItem(
             inActiveItem: Icon(

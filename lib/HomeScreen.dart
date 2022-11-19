@@ -140,7 +140,7 @@ class HomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         SizedBox(width: 0.1 * width),
-                        Text("recommendation",
+                        Text("recommendations",
                             style: TextStyle(
                                 fontSize: 35,
                                 color: Colors.black,
