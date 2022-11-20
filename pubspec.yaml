@@ -53,6 +53,7 @@ dependencies:
   syncfusion_flutter_charts: ^20.3.57
   fl_chart: ^0.55.2
   fancy_containers: ^0.0.3
+  flutter_platform_alert: ^0.3.0
 
 
 dev_dependencies:
@@ -79,22 +80,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/logo.png
-    - assets/elipse.png
-    - assets/om.png
-    - assets/menu1.png
-    - assets/menu3.png
-    - assets/sfera.jpeg
-    - assets/delete.png
-    - assets/check.png
-    - assets/background.png
-    - assets/elipser.png
-    - assets/elipsel.png
-    - assets/logoclinica.png
-    - assets/sus.png
-    - assets/jos.png
-    - assets/dreapta.png
-    - assets/device.png
+    - assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
