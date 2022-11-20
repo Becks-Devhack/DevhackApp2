@@ -1,3 +1,4 @@
+import 'package:dev_hack/services/login_service.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/services.dart';
@@ -126,67 +127,42 @@ class _LoginScreenState extends State<LoginScreen> {
                             height: 20,
                           ),
                           ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, PageManager.routName);
+                              onPressed: () async {
+                                var Response = LoginUser(emailController.text, passwordController.text);
+                                var response;
+                                await Response.loginUser().then((value) => response = value);
+                                print(response);
+                                if (response == LoginResponse.LoignSuccessful){
+                                  Navigator.pushNamed(context, PageManager.routName);
+                                }
+                                else if (response == LoginResponse.LoginError){
+                                  showDialog(context: context,
+                                      builder: (context){
+                                        return AlertDialog(
+                                          title: Text(
+                                            "Wrong credentials!",
+                                            style: TextStyle(fontSize: 24.0),
+                                          ),
+                                        );
+                                      });
+                                }
+                              },
+                              style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.resolveWith<Color?>(
+                                      (Set<MaterialState> states) {
 
-                              if (_formKey.currentState!.validate()) {
-                                var userSignin = {
-                                  'email': '',
-                                  'password': '',
-                                };
-                                userSignin['email'] = emailController.text;
-                                userSignin['password'] = passwordController.text;
+                                    return Color.fromRGBO(240,101,67, 1);
+                                  },
+                                ),
 
-                                DatabaseReference database =
-                                FirebaseDatabase.instance.ref('Users');
-                                String keyUser = '';
-                                database.once().then((data) {
-                                  Map<String, dynamic> mapData =
-                                  data.snapshot.value as Map<String, dynamic>;
-                                  try {
-                                    mapData.forEach((key, value) {
-                                      print(value['email']);
-                                      if ((value['email'] == userSignin['email']) &&
-                                          (value['password'] ==
-                                              userSignin['password'])) {
-                                        keyUser = key;
-                                        throw '';
-                                      } else {
-                                        keyUser = key;
-                                        throw '';
-                                      }
-                                    });
-                                  } catch (e) {
-                                  } finally {
-                                    if (keyUser == '') {
-                                      SnackBar(
-                                        content: new Text('Wrong email or password'),
-                                        duration: new Duration(seconds: 5),
-                                      );
-                                    } else {
-                                      Navigator.pushNamed(
-                                        context,
-                                        PageManager.routName,
-                                        arguments: keyUser,
-                                      );
-                                    }
-                                  }
-                                });
-                              }
-                            },
-                            style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all<Color>(Color(0xFF758ECD)),
-                                shape:
-                                MaterialStateProperty.all<RoundedRectangleBorder>(
-                                    RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(18.0),
-                                        side: BorderSide(color: Color(0xFF758ECD))))),
-                            child: const Text(
-                              'Sign in',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
+                                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(18.0),
+                                      side: BorderSide(color: Color.fromRGBO(240,101,67, 1))
+                                  ),
+                                ),
                               ),
-                            ),
+                              child: Text("Log in")
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
