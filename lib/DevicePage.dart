@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_platform_alert/flutter_platform_alert.dart';
 
 import 'main.dart';
 
@@ -49,7 +50,7 @@ class _DevicePageState extends State<DevicePage> {
             SizedBox(height: 0.1 * height),
             eu
                 ? Container(
-                    height: 0.41 * height,
+                    height: 0.5 * height,
                     child: Column(
                       children: [
                         Container(
@@ -74,13 +75,119 @@ class _DevicePageState extends State<DevicePage> {
                   )
                 : GestureDetector(
                     onTap: () {
-                      setState(() {
-                        eu = true;
-                        print(eu);
-                      });
+                      showDialog(
+                          context: context,
+                          builder: (context) {
+                            return AlertDialog(
+                                backgroundColor:
+                                    Color.fromRGBO(117, 142, 205, 0.5),
+                                title: Column(children: [
+                                  SizedBox(
+                                    width: 0.5 * width,
+                                    height: 0.06 * height,
+                                    child: Row(children: [
+                                      Image(
+                                          image: AssetImage(
+                                              'assets/Fitbit-Logo.png')),
+                                      SizedBox(width: 0.023 * width),
+                                      SizedBox(
+                                          width: 0.37 * width,
+                                          height: 0.06 * height,
+                                          child: ElevatedButton(
+                                            style: ElevatedButton.styleFrom(
+                                                backgroundColor: Colors.cyan),
+                                            // set the background color)
+                                            onPressed: () {
+                                              Navigator.pop(context);
+                                              setState(() {
+                                                eu = true;
+                                              });
+                                            },
+                                            child: Text(
+                                              "Fitbit",
+                                              style: TextStyle(
+                                                  color: Colors.white),
+                                            ),
+                                          ))
+                                    ]),
+                                  ),
+                                  SizedBox(
+                                    height: 0.02 * height,
+                                  ),
+                                  SizedBox(
+                                    width: 0.5 * width,
+                                    height: 0.06 * height,
+                                    child: Row(children: [
+                                      Image(
+                                          image: AssetImage(
+                                              'assets/samsung_logo.jpg')),
+                                      SizedBox(
+                                        width: 0.015 * width,
+                                      ),
+                                      SizedBox(
+                                          width: 0.37 * width,
+                                          height: 0.06 * height,
+                                          child: ElevatedButton(
+                                            style: ElevatedButton.styleFrom(
+                                                backgroundColor: Color.fromRGBO(
+                                                    20,
+                                                    40,
+                                                    160,
+                                                    1)), // set the background color)
+                                            onPressed: () {
+                                              Navigator.pop(context);
+                                              setState(() {
+                                                eu = true;
+                                              });
+                                            },
+                                            child: Text(
+                                              "Samsung",
+                                              style: TextStyle(
+                                                  color: Colors.white),
+                                            ),
+                                          ))
+                                    ]),
+                                  ),
+                                  SizedBox(
+                                    height: 0.02 * height,
+                                  ),
+                                  SizedBox(
+                                    width: 0.5 * width,
+                                    height: 0.06 * height,
+                                    child: Row(children: [
+                                      Image(
+                                          image: AssetImage(
+                                              'assets/Huawei-Logo.png')),
+                                      SizedBox(
+                                        width: 0.025 * width,
+                                      ),
+                                      SizedBox(
+                                          width: 0.37 * width,
+                                          height: 0.06 * height,
+                                          child: ElevatedButton(
+                                            style: ElevatedButton.styleFrom(
+                                                backgroundColor: Color.fromRGBO(
+                                                    207, 10, 44, 1)),
+                                            // set the background color)
+                                            onPressed: () {
+                                              Navigator.pop(context);
+                                              setState(() {
+                                                eu = true;
+                                              });
+                                            },
+                                            child: Text(
+                                              "Fitbit smartwatch",
+                                              style: TextStyle(
+                                                  color: Colors.white),
+                                            ),
+                                          ))
+                                    ]),
+                                  )
+                                ]));
+                          });
                     },
                     child: Container(
-                      height: 0.31 * height,
+                      height: 0.5 * height,
                       child: Column(
                         children: [
                           Container(

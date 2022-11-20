@@ -217,6 +217,8 @@ layout notification_template_part_chronometer
 layout notification_template_part_time
 mipmap ic_launcher
 raw firebase_common_keep
+string abort
+string cancel
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title
@@ -235,6 +237,7 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string continue_button
 string copy_toast_msg
 string default_web_client_id
 string fallback_menu_item_copy_link
@@ -245,8 +248,15 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string ignore
+string no
+string ok
 string project_id
+string retry
 string status_bar_notification_info_overflow
+string try_again
+string yes
+style AlertDialogCustom
 style LaunchTheme
 style NormalTheme
 style TextAppearance_Compat_Notification
