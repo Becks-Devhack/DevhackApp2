@@ -53,3 +53,23 @@ class StressLevelInterval{
     );
   }
 }
+
+class BlockChainPost{
+  String information = '';
+  List<String> requested_info = [];
+
+  BlockChainPost(this.information);
+  BlockChainPost.FromBlockChainPost(List<dynamic> json) {
+    json.map((e) => requested_info.insert(0, e));
+  }
+
+  // factory BlockChainPost.FromJson(Map<String, dynamic> json) {
+  //   return BlockChainPost.FromBlockChainPost(json);
+  // }
+
+  Map<String, dynamic> ToJson() {
+    return {
+      'information': this.information
+    };
+  }
+}

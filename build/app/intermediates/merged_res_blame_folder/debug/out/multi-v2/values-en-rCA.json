@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Users\\FlutterApps\\Devhack\\dev_hack\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rCA\\values-en-rCA.xml",
+            "outputFile": "E:\\Faculta\\Hacks\\DevhackApp2\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rCA\\values-en-rCA.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Andrei\\.gradle\\caches\\transforms-3\\005627934cb5de51d804cd3c597f8200\\transformed\\core-1.8.0\\res\\values-en-rCA\\values-en-rCA.xml",
+                    "source": "C:\\Users\\Rs\\.gradle\\caches\\transforms-3\\005627934cb5de51d804cd3c597f8200\\transformed\\core-1.8.0\\res\\values-en-rCA\\values-en-rCA.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Andrei\\.gradle\\caches\\transforms-3\\297942c3957902ff7659eb1bc47c3617\\transformed\\browser-1.4.0\\res\\values-en-rCA\\values-en-rCA.xml",
+                    "source": "C:\\Users\\Rs\\.gradle\\caches\\transforms-3\\297942c3957902ff7659eb1bc47c3617\\transformed\\browser-1.4.0\\res\\values-en-rCA\\values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

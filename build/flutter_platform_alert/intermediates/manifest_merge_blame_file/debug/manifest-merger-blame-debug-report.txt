@@ -1,0 +1,12 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="net.zonble.flutter_platform_alert" >
+4
+5    <uses-sdk
+5-->D:\windows-programs\flutter\.pub-cache\hosted\pub.dartlang.org\flutter_platform_alert-0.3.0\android\src\main\AndroidManifest.xml:4:5-44
+6        android:minSdkVersion="19"
+6-->D:\windows-programs\flutter\.pub-cache\hosted\pub.dartlang.org\flutter_platform_alert-0.3.0\android\src\main\AndroidManifest.xml:4:15-41
+7        android:targetSdkVersion="19" />
+7-->D:\windows-programs\flutter\.pub-cache\hosted\pub.dartlang.org\flutter_platform_alert-0.3.0\android\src\main\AndroidManifest.xml:4:5-44
+8
+9</manifest>
